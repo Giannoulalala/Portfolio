@@ -14,7 +14,7 @@ Welcome to my personal website and portfolio! This project serves as a collectio
 
 To view my website and explore my portfolio, simply visit the following link:
 
-[[Personal Website and Portfolio]([#](https://giannoulalala.github.io/Portfolio/))]
+https://giannoulalala.github.io/Portfolio/
 
 ## Contact Information
 
