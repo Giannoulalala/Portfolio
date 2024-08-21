@@ -11,9 +11,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
-        window.alert("Τα παρακατω project αφορουν μόνο κινητές συσκευές. Αφού προχωρήσετε σε κάθε project, παρακαλώ πατήστε την επιλογή Full Screen");
-    </script>
+    <script>function showAlert() {
+        document.getElementById("customAlert").style.display = "block";
+    }
+
+    function closeAlert() {
+        document.getElementById("customAlert").style.display = "none";
+    }
+
+    // Εμφανίζουμε το custom alert όταν φορτώνει η σελίδα
+    window.onload = function() {
+        showAlert();
+    };</script>
+    <div id="customAlert" class="custom-alert">
+        <p>📱 Τα παρακάτω project αφορούν μόνο κινητές συσκευές. Αφού προχωρήσετε σε κάθε project, παρακαλώ πατήστε την επιλογή Full Screen 😃</p>
+        <button onclick="closeAlert()">OK</button>
+    </div>
     <header class="header">
         <a href="index.html" class="logo" >Tagari Ioanna | Unity Projects </a>
         <i class='bx bx-menu' id="menu-icon"></i>
