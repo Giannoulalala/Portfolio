@@ -319,7 +319,7 @@ span {
 
 .btn:hover{
     box-shadow: none;
-  transition: .9s ease;
+    transition: .9s ease;
 }
 
 
@@ -735,4 +735,38 @@ span {
     text-decoration: underline;
 }
 
+.custom-alert {
+    display: none; /* Αρχικά κρυφό */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #828181;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+}
 
+.custom-alert p {
+    color: rgb(252, 212, 220);
+    font-size: larger;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+}
+
+.custom-alert button {
+    background-color: #1294a3;
+    font-size: 2rem;
+
+    color: crimson;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.custom-alert button:hover {
+    background-color: #0c646d;
+}
