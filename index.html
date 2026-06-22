@@ -1,180 +1,488 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="UTF-8" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portofolio Website</title>
-
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-    <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
-    
-    <header class="header">
-        <a href="#" class="logo" >Tagari Ioanna | Portofolio  </a>
-        <i class='bx bx-menu' id="menu-icon"></i>
 
+    <section class="hero" id="home">
+
+        <div class="stars"></div>
+        <!-- NAVBAR -->
         <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#portfolio">Portofolio</a>
-        </nav>
-    </header>
-    
+            <div class="logo">Portfolio - Tagari Ioanna</div>
 
-    <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hello its me!</h3>
-            <h1>Ioanna Tagari</h1>
-            <h3>And I'm a 
-                <br><span>Junior Developer</span></h3>
-                <br>
-                
-            <p> 
-                
-Here, I will share with you some of my creations. 
-I believe that each piece of code I write is a story waiting to be told. With 
-a dedication to innovation and evolution, I present my projects as a journey that 
-is constantly unfolding.
-
-Thank you for visiting my portfolio. I hope you find inspiration and innovation in
- every corner. I look forward to getting to know you better. Thank you for your interest. <br> 
- Hope to see you soon!
-            </p>
-            <div class="social-media">
-                <a href="mailto:tagari19ioanna@gmail.com"><i class='bx bxl-gmail' ></i></a>
-                <a href="https://github.com/Giannoulalala"><i class='bx bxl-github'></i></a>
-                <a href="https://www.linkedin.com/in/ioanna-tagari/"><i class='bx bxl-linkedin-square' ></i></a>
+            <ul class="nav-links">
+                <div class="close-menu">✕</div>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <!--<li><a href="#contact">Contact</a></li>-->
+            </ul>
+            <div class="menu-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16" /><path d="M4 12h16" /><path d="M4 19h16" /></svg>
             </div>
-            <a href="CV-Tagari_Ioanna_en.pdf" download>            
-                <div class="btn">Download CV</div></a>
+        </nav>
+
+        <!-- HERO CONTENT -->
+        <div class="hero-content">
+
+            <!-- LEFT IMAGE -->
+            <div class="hero-image">
+                <img src="profile_cycle.png" alt="profile">
+            </div>
+
+            <!-- RIGHT TEXT -->
+            <div class="hero-text">
+                <h1>Ioanna Tagari</h1>
+                <h2>Frontend Developer & Web Designer</h2>
+
+                <p>
+                    Crafting beautiful, user-centered digital experiences through code and design.
+                    Passionate about creating intuitive interfaces that blend aesthetics with functionality.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="CV_Ioanna_Tagari.pdf">
+                        <button class="btn-primary">Download Resume</button>
+                    </a>
+
+
+                    <div class="socials">
+                        <a href="https://github.com/Giannoulalala">
+                            <svg width="127" height="127" viewBox="0 0 127 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_3_4)">
+                                    <path d="M44.9898 43.4689C44.1222 41.2708 44.1562 38.7588 44.5431 36.4587C47.176 37.2605 49.7166 38.4881 51.9076 40.1493C52.8759 40.8834 54.1517 41.1241 55.3407 40.7666C58.2224 39.9004 61.3946 39.4169 64.7372 39.4169C68.0768 39.4169 71.2458 39.8994 74.1254 40.7642C75.3141 41.1211 76.589 40.8805 77.5571 40.147C79.7472 38.487 82.2868 37.2601 84.9184 36.4587C85.305 38.7566 85.339 41.2655 84.4745 43.4623C83.9534 44.7854 84.2146 46.3091 85.1963 47.3898C87.7112 50.1579 89.0527 53.3414 89.0527 56.6473C89.0527 63.9326 82.2117 71.0756 71.2198 73.2507C68.4672 73.7956 67.3932 77.2289 69.5 79.198C70.8495 80.4592 71.6845 82.2377 71.6845 84.2158V94.5539C71.6845 96.4569 73.2397 98 75.1582 98C77.0767 98 78.6318 96.4569 78.6318 94.5539V84.2158C78.6318 82.2522 78.2167 80.3834 77.4706 78.6921C87.9519 75.0827 96 66.9593 96 56.6473C96 52.0034 94.3174 47.7383 91.5287 44.1655C92.2575 41.341 92.1929 38.4924 91.9157 36.3069C91.6677 34.3511 91.3227 31.7859 89.9322 30.2574C87.8668 27.9875 84.4439 29.3231 82.0123 30.1484C79.8642 30.873 77.2069 32.0279 74.6326 33.7496C71.515 32.9531 68.1866 32.5248 64.7372 32.5248C61.2844 32.5248 57.9525 32.9539 54.8325 33.752C52.2578 32.0294 49.5997 30.874 47.4508 30.149C45.0196 29.3236 41.5943 27.9874 39.5291 30.2578C38.1133 31.8143 37.815 34.1758 37.5618 36.1796L37.5451 36.3119C37.2681 38.4995 37.2043 41.3513 37.9361 44.1779C35.1531 47.7483 33.4745 52.0089 33.4745 56.6473C33.4745 66.9593 41.5226 75.0827 52.0041 78.6921C51.2663 80.3638 50.8523 82.2088 50.8429 84.1475L50.2602 84.263C47.7701 84.6034 46.175 84.3002 45.0893 83.8432C42.4491 82.7322 41.0896 79.9375 39.4255 77.8013C38.3916 76.4739 36.8857 74.8191 34.573 74.0544C32.753 73.4527 30.7859 74.4283 30.1792 76.234C29.5725 78.0394 30.5561 79.9909 32.3761 80.5929C34.3168 81.2346 35.6563 84.5287 36.8849 85.9912C38.1802 87.5333 39.9035 89.1474 42.376 90.1881C44.7434 91.1844 47.5243 91.5411 50.8427 91.1379V94.5539C50.8427 96.4569 52.3979 98 54.3163 98C56.2347 98 57.79 96.4569 57.79 94.5539V84.2158C57.79 82.2377 58.625 80.4592 59.9745 79.198C62.0816 77.2285 61.0066 73.7956 58.2547 73.2507C47.2628 71.0756 40.4218 63.9326 40.4218 56.6473C40.4218 53.3446 41.7608 50.1642 44.2707 47.398C45.2521 46.3164 45.5121 44.792 44.9898 43.4689Z" fill="#C354C5" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_3_4">
+                                        <rect width="127" height="127" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </a>
+
+                        <a href="http://www.linkedin.com/in/ioanna-tagari">
+                            <svg width="127" height="127" viewBox="0 0 127 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_4_15)">
+                                    <path d="M45.4165 51.1665C48.0399 51.1665 50.1665 49.0399 50.1665 46.4165C50.1665 43.7931 48.0399 41.6665 45.4165 41.6665C42.7931 41.6665 40.6665 43.7931 40.6665 46.4165C40.6665 49.0399 42.7931 51.1665 45.4165 51.1665Z" fill="#C354C5" />
+                                    <path d="M40.6665 57.4999C40.6665 55.751 42.0843 54.3333 43.8332 54.3333H46.9998C48.7487 54.3333 50.1665 55.751 50.1665 57.4999V82.8333C50.1665 84.5822 48.7487 85.9999 46.9998 85.9999H43.8332C42.0843 85.9999 40.6665 84.5822 40.6665 82.8333V57.4999Z" fill="#C354C5" />
+                                    <path d="M59.6667 85.9999H62.8333C64.5823 85.9999 66 84.5822 66 82.8333V68.5833C66 63.8333 75.5 60.6666 75.5 66.9999V82.8345C75.5 84.5835 76.9177 85.9999 78.6667 85.9999H81.8333C83.5823 85.9999 85 84.5822 85 82.8333V63.8333C85 57.4999 80.25 54.3333 73.9167 54.3333C67.5833 54.3333 66 59.0833 66 59.0833V57.4999C66 55.751 64.5823 54.3333 62.8333 54.3333H59.6667C57.9177 54.3333 56.5 55.751 56.5 57.4999V82.8333C56.5 84.5822 57.9177 85.9999 59.6667 85.9999Z" fill="#C354C5" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M88.1667 29C93.4135 29 97.6667 33.2533 97.6667 38.5V89.1667C97.6667 94.4135 93.4135 98.6667 88.1667 98.6667H37.5C32.2533 98.6667 28 94.4135 28 89.1667V38.5C28 33.2533 32.2533 29 37.5 29H88.1667ZM88.1667 35.3333C89.9156 35.3333 91.3333 36.7511 91.3333 38.5V89.1667C91.3333 90.9156 89.9156 92.3333 88.1667 92.3333H37.5C35.7511 92.3333 34.3333 90.9156 34.3333 89.1667V38.5C34.3333 36.7511 35.7511 35.3333 37.5 35.3333H88.1667Z" fill="#C354C5" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_4_15">
+                                        <rect width="127" height="127" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="home-img">
-            <img src="images/ioannatagaripic-removebg-preview.png" alt="">
-        </div>
+
     </section>
 
     <section class="about" id="about">
-        <div class="about-img">
-            <img src="images/ioannatagaripic-removebg-preview.png" alt="">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-container">
+
+            <!-- LEFT TEXT -->
+            <div class="about-text">
+                <p>
+                    I'm a passionate frontend developer and web designer with a keen eye for detail and a love for creating beautiful, functional user interfaces.
+                </p>
+
+                <p>
+                    I believe that great design is invisible - it just works. Whether I'm building responsive web applications or crafting interactive experiences, I always focus on user needs first.
+                </p>
+
+                <p>
+                    Currently pursuing my master's degree while working on exciting projects that push the boundaries of web development.
+                </p>
+            </div>
+
+            <!-- RIGHT CARDS -->
+            <div class="about-cards">
+
+                <div class="card">
+                    <div class="icon">
+                        <svg width="87" height="68" viewBox="0 0 87 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_5_38)">
+                                <path d="M49.4167 19.4287C49.7453 18.2781 49.0793 17.0789 47.9286 16.7502C46.7781 16.4215 45.5788 17.0877 45.2502 18.2382L36.5834 48.5716C36.2547 49.7221 36.9209 50.9213 38.0715 51.25C39.2221 51.5789 40.4213 50.9127 40.75 49.762L49.4167 19.4287Z" fill="#C354C5" />
+                                <path d="M29.5647 24.0306C30.2841 24.9869 30.0921 26.3452 29.136 27.0646L22.2193 32.2685C21.0673 33.1354 21.0673 34.8644 22.2193 35.7313L29.136 40.9352C30.0921 41.6548 30.2841 43.013 29.5647 43.9692C28.8452 44.9256 27.4869 45.1173 26.5307 44.398L19.6141 39.1941C16.158 36.5936 16.1579 31.4062 19.614 28.8059L26.5307 23.6019C27.4869 22.8825 28.8452 23.0744 29.5647 24.0306Z" fill="#C354C5" />
+                                <path d="M56.4354 43.9692C55.716 43.013 55.908 41.6548 56.8641 40.9352L63.7808 35.7313C64.9328 34.8644 64.9328 33.1354 63.7808 32.2685L56.8641 27.0646C55.908 26.3452 55.716 24.9869 56.4354 24.0306C57.1549 23.0744 58.5132 22.8825 59.4693 23.6019L66.386 28.8059C69.842 31.4062 69.842 36.5936 66.386 39.1941L59.4693 44.398C58.5132 45.1173 57.1549 44.9256 56.4354 43.9692Z" fill="#C354C5" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_5_38">
+                                    <rect width="87" height="68" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </div>
+                    <h3>Clean Code</h3>
+                    <p>Writing maintainable, scalable code with best practices</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">
+                        <svg width="87" height="68" viewBox="0 0 87 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_5_38)">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M37.2193 11C34.0228 11 31.4381 12.0636 29.6465 13.8307C27.8738 15.5788 27 17.8997 27 20.1956C27 22.4915 27.8738 24.8124 29.6465 26.5605C29.7691 26.6812 29.8954 26.799 30.0253 26.9137C30.197 27.0644 30.3751 27.2091 30.5594 27.3478C30.3946 27.4715 30.2349 27.6002 30.0802 27.7339C29.9309 27.8636 29.7862 27.9973 29.6465 28.135C27.8738 29.8831 27 32.2041 27 34.4999C27 36.7957 27.8738 39.1167 29.6465 40.8647C29.9142 41.1291 30.1996 41.3766 30.5021 41.6081C29.274 42.5769 28.3103 43.8402 27.7065 45.2849C27.004 46.9653 26.8202 48.8142 27.1784 50.5981C27.5365 52.3823 28.4204 54.0205 29.7184 55.3067C31.0165 56.5929 32.6702 57.4679 34.4705 57.8232C36.2709 58.1784 38.137 57.9957 39.8331 57.2993C41.5291 56.6039 42.9784 55.4254 43.9983 53.9128C45.0182 52.4013 45.5625 50.6231 45.5625 48.8042V42.147C47.0372 43.1248 48.8109 43.6955 50.7188 43.6955C55.8447 43.6955 60 39.5787 60 34.4999C60 31.5863 58.6324 28.9891 56.4981 27.3039C56.8004 27.0724 57.0859 26.8249 57.3536 26.5605C59.1263 24.8124 60 22.4915 60 20.1956C60 17.8997 59.1263 15.5788 57.3536 13.8307C55.5619 12.0636 52.9772 11 49.7807 11H37.2193ZM41.4375 29.3912H37.2193C34.978 29.3912 33.4843 30.1156 32.5569 31.0305C31.6107 31.9646 31.125 33.2197 31.125 34.4999C31.125 35.7801 31.6107 37.0352 32.5569 37.9693C33.4843 38.8842 34.9781 39.6086 37.2193 39.6086H41.4375V29.3912ZM33.4341 44.5826C34.2768 44.0247 35.2676 43.6955 36.2812 43.6955C36.2812 43.6955 37.0684 43.6955 37.2193 43.6955H41.4375V48.8042C41.4375 49.8079 41.1056 50.7898 40.5424 51.625C39.9793 52.4601 39.1789 53.1106 38.2424 53.4948C37.306 53.8799 36.2756 53.9797 35.2815 53.7841C34.2873 53.5886 33.3742 53.1047 32.6574 52.3941C31.9407 51.6849 31.4527 50.7798 31.2549 49.7951C31.0571 48.8101 31.1586 47.7884 31.5466 46.8614C31.9344 45.9335 32.5913 45.1402 33.4341 44.5826ZM45.5625 25.3043H49.7807C52.0218 25.3043 53.5157 24.5799 54.443 23.6649C55.3893 22.731 55.875 21.4758 55.875 20.1956C55.875 18.9155 55.3893 17.6602 54.443 16.7263C53.5157 15.8113 52.022 15.0869 49.7807 15.0869H45.5625V25.3043ZM41.4375 25.3043H37.2193C34.9781 25.3043 33.4843 24.5799 32.5569 23.6649C31.6107 22.731 31.125 21.4758 31.125 20.1956C31.125 18.9155 31.6107 17.6602 32.5569 16.7263C33.4843 15.8113 34.978 15.0869 37.2193 15.0869H41.4375V25.3043ZM50.7188 39.5777C47.8884 39.5777 45.5941 37.3037 45.5941 34.4999C45.5941 31.696 47.8884 29.4222 50.7188 29.4222C53.5491 29.4222 55.8434 31.696 55.8434 34.4999C55.8434 37.3037 53.5491 39.5777 50.7188 39.5777Z" fill="#C354C5" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_5_38">
+                                    <rect width="87" height="68" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+
+                    </div>
+                    <h3>Design Thinking</h3>
+                    <p>User-centered design approach to problem solving</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">
+                        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.3333 15.9999C14.3333 15.0794 15.0795 14.3333 15.9999 14.3333C16.9204 14.3333 17.6666 15.0794 17.6666 15.9999C17.6666 16.9204 16.9204 17.6666 15.9999 17.6666C15.0795 17.6666 14.3333 16.9204 14.3333 15.9999Z" fill="#C354C5" />
+                            <path d="M14.3333 22.6667C14.3333 21.7462 15.0795 21 15.9999 21C16.9204 21 17.6666 21.7462 17.6666 22.6667C17.6666 23.5872 16.9204 24.3333 15.9999 24.3333C15.0795 24.3333 14.3333 23.5872 14.3333 22.6667Z" fill="#C354C5" />
+                            <path d="M22.6667 21C21.7462 21 21 21.7462 21 22.6667C21 23.5872 21.7462 24.3333 22.6667 24.3333H29.3333C30.2538 24.3333 31 23.5872 31 22.6667C31 21.7462 30.2538 21 29.3333 21H22.6667Z" fill="#C354C5" />
+                            <path d="M34.3333 22.6667C34.3333 21.7462 35.0794 21 35.9999 21C36.9204 21 37.6666 21.7462 37.6666 22.6667C37.6666 23.5872 36.9204 24.3333 35.9999 24.3333C35.0794 24.3333 34.3333 23.5872 34.3333 22.6667Z" fill="#C354C5" />
+                            <path d="M21 15.9999C21 15.0794 21.7462 14.3333 22.6667 14.3333C23.5872 14.3333 24.3333 15.0794 24.3333 15.9999C24.3333 16.9204 23.5872 17.6666 22.6667 17.6666C21.7462 17.6666 21 16.9204 21 15.9999Z" fill="#C354C5" />
+                            <path d="M27.6667 15.9999C27.6667 15.0794 28.4129 14.3333 29.3334 14.3333C30.2539 14.3333 31.0001 15.0794 31.0001 15.9999C31.0001 16.9204 30.2539 17.6666 29.3334 17.6666C28.4129 17.6666 27.6667 16.9204 27.6667 15.9999Z" fill="#C354C5" />
+                            <path d="M34.3333 15.9999C34.3333 15.0794 35.0794 14.3333 35.9999 14.3333C36.9204 14.3333 37.6666 15.0794 37.6666 15.9999C37.6666 16.9204 36.9204 17.6666 35.9999 17.6666C35.0794 17.6666 34.3333 16.9204 34.3333 15.9999Z" fill="#C354C5" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M39.3334 7.66675C42.0949 7.66675 44.3334 9.90533 44.3334 12.6667V26.0001C44.3334 28.7616 42.0949 31.0001 39.3334 31.0001H12.6667C9.90533 31.0001 7.66675 28.7616 7.66675 26.0001V12.6667C7.66675 9.90533 9.90533 7.66675 12.6667 7.66675H39.3334ZM39.3334 11.0001C40.2539 11.0001 41.0001 11.7463 41.0001 12.6667V26.0001C41.0001 26.9206 40.2539 27.6667 39.3334 27.6667H12.6667C11.7463 27.6667 11.0001 26.9206 11.0001 26.0001V12.6667C11.0001 11.7463 11.7463 11.0001 12.6667 11.0001H39.3334Z" fill="#C354C5" />
+                            <path d="M32.9872 41.4044C33.6381 42.0552 33.6381 43.1106 32.9872 43.7614C32.3364 44.4122 31.2811 44.4122 30.6302 43.7614L25.9162 39.0474L21.2021 43.7616C20.5512 44.4124 19.496 44.4124 18.8451 43.7616C18.1942 43.1107 18.1942 42.0554 18.8451 41.4046L23.5591 36.6906C24.8609 35.3887 26.9714 35.3886 28.2732 36.6904L32.9872 41.4044Z" fill="#C354C5" />
+                        </svg>
+                    </div>
+                    <h3>Performance</h3>
+                    <p>Optimized experiences that load fast and run smooth</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">
+                        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0878 17.7557C12.0296 19.5699 11.6813 22.0872 12.3315 24.6881C12.5655 25.6239 13.2457 26.8272 14.3237 28.2122C15.3809 29.5702 16.7302 30.9898 18.1593 32.3519C20.993 35.0529 24.0426 37.4354 25.5 38.5372C26.9575 37.4354 30.007 35.0529 32.8407 32.3519C34.2698 30.9898 35.6191 29.5702 36.6762 28.2122C37.7544 26.8272 38.4346 25.6239 38.6686 24.6881C39.3187 22.0872 38.9705 19.5699 37.9122 17.7557C36.8792 15.985 35.1545 14.8334 32.7917 14.8334C30.736 14.8334 29.2872 16.3534 28.2627 18.4023C27.7705 19.3867 27.436 20.3859 27.2242 21.1482C27.1191 21.5266 27.0461 21.8398 27.0001 22.0547C26.8369 22.8162 25.9584 22.8542 25.5 22.8542C25.0417 22.8542 24.1617 22.8091 24 22.0547C23.9539 21.8398 23.881 21.5266 23.7758 21.1482C23.5641 20.3859 23.2295 19.3868 22.7374 18.4023C21.7128 16.3534 20.264 14.8334 18.2083 14.8334C15.8455 14.8334 14.1207 15.985 13.0878 17.7557ZM25.5 17.4148C25.5497 17.3094 25.6011 17.2037 25.654 17.0979C26.817 14.7718 29.014 11.9167 32.7917 11.9167C36.2622 11.9167 38.9125 13.6818 40.4316 16.2861C41.9254 18.8469 42.3063 22.163 41.4981 25.3954C41.1153 26.9269 40.135 28.5172 38.9778 30.0037C37.7997 31.517 36.3394 33.0467 34.853 34.4633C31.8791 37.2979 28.7021 39.7741 27.2223 40.8913C26.2005 41.663 24.7996 41.663 23.7777 40.8913C22.298 39.7741 19.121 37.2979 16.147 34.4633C14.6607 33.0467 13.2002 31.517 12.0222 30.0037C10.8651 28.5172 9.88477 26.9269 9.5019 25.3954C8.69377 22.163 9.07464 18.8469 10.5684 16.2861C12.0876 13.6818 14.7378 11.9167 18.2083 11.9167C21.986 11.9167 24.183 14.7718 25.346 17.0979C25.399 17.2037 25.4503 17.3094 25.5 17.4148Z" fill="#C354C5" />
+                        </svg>
+                    </div>
+                    <h3>Passion</h3>
+                    <p>Dedicated to creating meaningful digital experiences</p>
+                </div>
+
+            </div>
+
         </div>
-        <div class="about-content">
-            <h2 class="heading"> About <span>Me</span></h2>
-            <h3> Frontend Developer</h3>
-            <p>I am a computer science student with a passion for web development, 
-                web design, and game development. Specializing in coding and possessing a creative mindset,
-                 I enjoy crafting dynamic websites and games. I have experience working collaboratively in 
-                 teams and I am eager to contribute to and grow in the field of computer science. 
-                 I look forward to connecting with professionals
-                 in the industry and exploring new opportunities for development and collaboration.</p>
-            
+
+        <!-- SKILLS -->
+        <div class="skills">
+            <h3>Skills & Technologies</h3>
+
+            <div class="skills-list">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>TypeScript</span>
+                <span>Vue.js</span>
+                <span>React</span>
+                <span>Tailwind</span>
+                <span>Node.js</span>
+                <span>Unity</span>
+                <span>C#</span>
+                <span>Figma</span>
+            </div>
         </div>
+
     </section>
 
-    
-<!--
+    <section class="projects" id="projects">
 
+        <h2 class="section-title">Featured Projects</h2>
 
-        <br>
-        <div class="portfolio-container">
-            <div class="portfolio-box">
-                <img src="images/unityandc.png" alt="">
-                <div class="portfolio-layer">
-                    <h4>Mobile - Unity games</h4>
-                    
-                    <a href="portfolioUnity.html"> <i class="bx bx-link-external"></i></a>
-                </div>
+        <!-- FILTERS -->
+        <div class="filters">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="desktop">Unity C# Desktop</button>
+            <button class="filter" data-filter="mobile">Unity Mobile</button>
+            <button class="filter" data-filter="web">Web Development</button>
+            <button class="filter" data-filter="design">Design</button>
+        </div>
 
+        <!-- PROJECTS GRID -->
+        <div class="projects-grid">
 
-            </div>
+            <div class="project-card" data-category="desktop">
+                <div class="project-image"></div>
+                <div class="project-content">
+                    <span class="category">UNITY C# DESKTOP</span>
+                    <h3>Flappy Bird</h3>
+                    <p>Relaxing game with unity and C#.</p>
 
-            <div class="portfolio-box">
-                <img src="images/two(1).jpg" alt="" >
-                <div class="portfolio-layer">
-                    <h4>Web Development</h4>
-                                        
-                    <a href="portfoliowebdev.html"> <i class="bx bx-link-external"></i></a>
-                </div>
-
-                
-            </div>
-
-            <div class="portfolio-box">
-                <img src="images/unityandc.png" alt="" >
-                <div class="portfolio-layer">
-                    <h4>Pc - Unity Games</h4>
-                                        
-                    <a href="portfoliopcunity.html"> <i class="bx bx-link-external"></i></a>
-                </div>
-
-                
-            </div>
-            
-
-            
-
-            
-
-            </div>-->
-
-
-
-
-
-
-
-            <section class="portfolio" id="portfolio">
-                <h2 class="heading">My <span>Projects</span> </h2><br>
-            
-                <div class="portfolio-list">
-                    <div class="portfolio-item">
-                        <img src="images/unitygames2d.jpg" alt="">
-                        <div class="portfolio-details">
-                            <h4>Unity C# for Mobile</h4>
-                            <p>Παιχνίδια για το κινητό με χρήση γλώσσας C# και του λογισμικού Unity</p>
-                            <a href="portfolioUnity.html"><i class="bx bx-link-external"></i></a>
-                        </div>
+                    <div class="tags">
+                        <span>Unity</span>
+                        <span>C#</span>
+                        <span>AI</span>
                     </div>
-                    <div class="portfolio-item">
-                        <img src="images/webdev.jpg" alt="">
-                        <div class="portfolio-details">
-                            <h4>Web Dev Projects</h4>
-                            <p>Projects με χρήση html,css,javascript</p>
-                            <a href="portfoliowebdev.html"><i class="bx bx-link-external"></i></a>
-                        </div>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="images/unityandc.png" alt="">
-                        <div class="portfolio-details">
-                            <h4>Unity C# for Desktop</h4>
-                            <p>Παιχνίδια για τον υπολογιστή με χρήση γλώσσας C# και του λογισμικού Unity</p>
-                            
-                            <a href="portfoliopcunity.html"><i class="bx bx-link-external"></i></a>
-                        </div>
+
+                    <div class="project-actions">
+                        <button class="btn-primary">View</button>
+
                     </div>
                 </div>
-            </section>
+            </div>
 
+            <div class="project-card" data-category="web">
+                <div class="project-image"></div>
+                <div class="project-content">
+                    <span class="category">WEB</span>
+                    <h3>3D Visualization Tool</h3>
+                    <p>Interactive data visualization with shaders.</p>
 
+                    <div class="tags">
+                        <span>Vue</span>
+                        <span>JS</span>
+                    </div>
 
+                    <div class="project-actions">
+                        <button class="btn-primary">View</button>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
     </section>
+    <!--
+    <section class="contact" id="contact">
+
+      <h2 class="section-title">Get In Touch</h2>
+
+      <p class="contact-subtitle">
+        I'm always open to discussing new projects, creative ideas, or opportunities.
+      </p>
+
+      <div class="contact-container">
+
+        LEFT FORM
+        <div class="contact-form">
+
+          <h3>Send a Message</h3>
+
+          <form>
+            <input type="text" placeholder="Your name" required>
+            <input type="email" placeholder="your.email@example.com" required>
+            <textarea placeholder="Tell me about your project..." rows="5"></textarea>
+
+            <button type="submit" class="btn-primary">Send Message</button>
+          </form>
+
+        </div>
+     RIGHT INFO
+        <div class="contact-info">
+
+          <h3>Connect With Me</h3>
+          <p>I typically respond within 24 hours.</p>
+
+          <div class="contact-links">
+
+            <div class="contact-item">
+              <span> </span>
+              <div>
+                <strong>GitHub</strong>
+                <p>@Giannoulalala</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span> </span>
+              <div>
+                <strong>LinkedIn</strong>
+                <p>Ioanna Tagari</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span></span>
+              <div>
+                <strong>Email</strong>
+                <p>tagari19ioanna@gmail.com</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="availability">
+            <span class="dot"></span>
+            Available for opportunities
+            <p>Currently open to master's program collaborations, internships, and freelance projects.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+    -->
 
     <footer class="footer">
-        <div class="footer-text">
-            <p>Ioanna Tagari</p>
+
+        <div class="footer-container">
+
+            <p>
+                © 2026 Ioanna Tagari • Made with <span class="heart">❤</span> and code
+            </p>
+
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Sitemap</a>
+            </div>
+
         </div>
 
-        <div class="footer-iconTop">
-            <a href="#home"><i class='bx bxs-up-arrow-circle'></i></a>
-        </div>
     </footer>
-
-
-
-    <script src="script.js"></script>
 </body>
+
+<script>
+    const starsContainer = document.querySelector(".stars");
+
+    const STAR_COUNT = 500; // παίξε 40–80
+
+    for (let i = 0; i < STAR_COUNT; i++) {
+        const star = document.createElement("div");
+        star.classList.add("star");
+
+        // random position
+        star.style.top = Math.random() * 100 + "%";
+        star.style.left = Math.random() * 100 + "%";
+
+        // random size
+        const size = Math.random() * 2 + 1;
+        star.style.width = size + "px";
+        star.style.height = size + "px";
+
+        // random animation
+        star.style.setProperty("--duration", (Math.random() * 3 + 2) + "s");
+        star.style.setProperty("--delay", (Math.random() * 5) + "s");
+
+        starsContainer.appendChild(star);
+
+        const cards = document.querySelectorAll(".card");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        cards.forEach((card) => {
+            observer.observe(card);
+        });
+
+        //skills animation
+
+        const skills = document.querySelectorAll(".skills-list span");
+
+        const skillsObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        }, { threshold: 0.2 });
+
+        skills.forEach(skill => skillsObserver.observe(skill));
+        //---------------filter functionallity
+
+
+        const filters = document.querySelectorAll(".filter");
+        const cards_proj = document.querySelectorAll(".project-card");
+
+        filters.forEach(btn => {
+            btn.addEventListener("click", () => {
+
+                // active button
+                filters.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+
+                const filter = btn.dataset.filter;
+
+                cards_proj.forEach(card => {
+                    if (filter === "all" || card.dataset.category === filter) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+
+            });
+        });
+
+        window.addEventListener("scroll", () => {
+            const nav = document.querySelector(".navbar");
+            nav.classList.toggle("scrolled", window.scrollY > 50);
+        });
+
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-links a");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+
+                if (link.getAttribute("href") === "#" + current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+
+
+        const toggle = document.querySelector(".menu-toggle");
+        const navLinkss = document.querySelector(".nav-links");
+        const closeBtn = document.querySelector(".close-menu");
+
+        toggle.addEventListener("click", () => {
+            navLinkss.classList.add("active");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            navLinkss.classList.remove("active");
+        });
+
+
+        document.querySelectorAll(".nav-links a").forEach(link => {
+            link.addEventListener("click", () => {
+                navLinkss.classList.remove("active");
+            });
+        });
+    }
+</script>
 </html>
+
